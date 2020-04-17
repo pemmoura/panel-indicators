@@ -74,7 +74,8 @@ var NightLightIndicator = new Lang.Class({
                 this._updateView();
             }
         });
-        
+
+        //IS THIS NEEDED?
         // sliderItem.add(this._slider, {
         //     expand: true
         // });

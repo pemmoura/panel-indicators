@@ -64,8 +64,8 @@ function enable() {
     bluetooth = new BluetoothIndicator();
     volume = new VolumeIndicator();
     power = new PowerIndicator();
-    calendar = new CalendarIndicator();
     notification = new NotificationIndicator();
+    calendar = new CalendarIndicator();
     user = new UserIndicator();
     nightlight = new NightLightIndicator();
 
