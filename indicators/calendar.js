@@ -44,14 +44,14 @@ var CalendarIndicator = new Lang.Class({
         });
 
         this._indicatorParent = this._clockIndicator.get_parent();
-        this._calendarParent = this._calendar.actor.get_parent();
-        this._sectionParent = this._clocksSection.actor.get_parent();
+        this._calendarParent = this._calendar.get_parent();
+        this._sectionParent = this._clocksSection.get_parent();
 
         this._indicatorParent.remove_actor(this._clockIndicator);
-        this._calendarParent.remove_child(this._calendar.actor);
-        this._calendarParent.remove_child(this._date.actor);
-        this._sectionParent.remove_child(this._clocksSection.actor);
-        this._sectionParent.remove_child(this._weatherSection.actor);
+        this._calendarParent.remove_child(this._calendar);
+        this._calendarParent.remove_child(this._date);
+        this._sectionParent.remove_child(this._clocksSection);
+        this._sectionParent.remove_child(this._weatherSection);
 
         this.box.add_actor(this._clockIndicator);
         this.box.add_actor(this._clockIndicatorFormat);
@@ -62,7 +62,7 @@ var CalendarIndicator = new Lang.Class({
 
         hbox = new St.BoxLayout({ name: 'calendarArea' });
 
-        boxLayout = new imports.ui.dateMenu.CalendarColumnLayout(this._calendar.actor);
+        boxLayout = new imports.ui.dateMenu.CalendarColumnLayout(this._calendar);
         vbox = new St.Widget({
             style_class: "datemenu-calendar-column",
             layout_manager: boxLayout,
@@ -80,8 +80,12 @@ var CalendarIndicator = new Lang.Class({
 
         this._messageList._clearButton.destroy();
         this._messageList.setEventSource(this._eventSource);
-        this._messageList._removeSection(this._messageList._notificationSection);
-        this._messageList._removeSection(this._messageList._mediaSection);
+
+        this._messageList._sectionList.remove_actor(this._messageList._notificationSection);
+        this._messageList._sectionList.remove_actor(this._messageList._eventsSection);
+        this._messageList._sectionList.remove_actor(this._messageList._eventsSection);
+        this._messageList._sectionList.remove_actor(this._messageList._mediaSection);
+        this._messageList._sync();
 
         let otherFile = Gio.File.new_for_uri('resource:///org/gnome/shell/theme/no-events.svg');
         this._otherIcon = new Gio.FileIcon({ file: otherFile });
@@ -90,10 +94,10 @@ var CalendarIndicator = new Lang.Class({
         this._messageList._placeholder._icon.gicon = this._otherIcon;
         this._messageList._placeholder._label.text = this._otherLabel;
 
-        hbox.add_child(this._messageList.actor);
+        hbox.add_child(this._messageList);
 
-        vbox.add_actor(this._date.actor);
-        vbox.add_actor(this._calendar.actor);
+        vbox.add_actor(this._date);
+        vbox.add_actor(this._calendar);
 
         this._scrollView = new St.ScrollView({
             overlay_scrollbars: true,
@@ -102,7 +106,7 @@ var CalendarIndicator = new Lang.Class({
             
         });
         this._scrollView.set_policy(St.PolicyType.NEVER, St.PolicyType.AUTOMATIC);
-        this._scrollView.actor.set_style('height: 116px;');
+        this._scrollView.set_style('height: 116px;');
 
         let scrollableContainer = new St.BoxLayout({
             vertical: true,
@@ -110,12 +114,12 @@ var CalendarIndicator = new Lang.Class({
             x_expand: true,
             y_expand: true,
         });
-        scrollableContainer.add_actor(this._clocksSection.actor);
+        scrollableContainer.add_actor(this._clocksSection);
         
         this._scrollView.add_actor(scrollableContainer);
 
         vbox.add_actor(this._scrollView);
-        vbox.add_actor(this._weatherSection.actor);
+        vbox.add_actor(this._weatherSection);
 
         this.menu.box.add(hbox);
 
@@ -149,14 +153,14 @@ var CalendarIndicator = new Lang.Class({
 
         var menuHeight = 356;
 
-        var clocksSectionHeight = this._clocksSection.actor.get_height();
+        var clocksSectionHeight = this._clocksSection.get_height();
  
         if (this._clocksSection._clocksApp != null) {
             clocksSectionHeight.length > 0 ? menuHeight += clocksSectionHeight : menuHeight += 120;
             this._scrollView.actor.show();
             this._clocksSection.actor.set_style('padding-left: 12px; padding-right: 20px;');
         } else {
-            this._scrollView.actor.hide();
+            this._scrollView.hide();
         }
 
         if (this._weatherSection._weatherClient.available) {

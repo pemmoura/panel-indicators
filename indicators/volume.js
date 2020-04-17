@@ -35,17 +35,17 @@ var VolumeIndicator = new Lang.Class({
         this._settings = Convenience.getSettings();
         this.menu.actor.add_style_class_name("aggregate-menu");
         this._volume = Main.panel.statusArea.aggregateMenu._volume;
-        this._volume.indicators.remove_actor(this._volume._primaryIndicator);
+        this._volume.remove_actor(this._volume._primaryIndicator);
         this.box.add_child(this._volume._primaryIndicator);
         Main.panel.statusArea.aggregateMenu.menu.box.remove_actor(this._volume.menu.actor);
         this.menu.box.add_actor(this._volume.menu.actor);
 
         this._mediaSection = Main.panel.statusArea.dateMenu._messageList._mediaSection;
-        Main.panel.statusArea.dateMenu._messageList._removeSection(this._mediaSection);
+        //Main.panel.statusArea.dateMenu._removeSection(this._mediaSection);
 
-        this._mediaSection.actor.set_style('max-width:400px;padding-right:6px;padding-bottom:10px;');
+        this._mediaSection.set_style('max-width:400px;padding-right:6px;padding-bottom:10px;');
 
-        this.menu.box.add_actor(this._mediaSection.actor);
+        this.menu.box.add_actor(this._mediaSection);
 
         this.menu.connect("open-state-changed", (menu, isOpen) => {
             if (isOpen) {

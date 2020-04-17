@@ -40,8 +40,8 @@ var NightLightIndicator = new Lang.Class({
         this.menu.actor.add_style_class_name("aggregate-menu");
 
         this._nightLight = Main.panel.statusArea.aggregateMenu._nightLight;
-        this._nightLight.indicators.remove_actor(this._nightLight._indicator);
-        this._nightLight.indicators.show();
+        this._nightLight.remove_actor(this._nightLight._indicator);
+        this._nightLight.show();
         this._nightLight._sync = function () {};
         
         this.box.add_child(this._nightLight._indicator);
@@ -75,9 +75,9 @@ var NightLightIndicator = new Lang.Class({
             }
         });
         
-        sliderItem.add(this._slider, {
-            expand: true
-        });
+        // sliderItem.add(this._slider, {
+        //     expand: true
+        // });
 
         this.menu.box.add_child(this._label);
         this.menu.addMenuItem(sliderItem);

@@ -25,11 +25,11 @@ const Convenience = Me.imports.convenience;
 
 const MenuItems = Me.imports.menuItems.MenuItems;
 const CustomButton = Me.imports.indicators.button.CustomButton;
+const NotificationIndicator = Me.imports.indicators.notification.NotificationIndicator;
 const CalendarIndicator = Me.imports.indicators.calendar.CalendarIndicator;
 const NetworkIndicator = Me.imports.indicators.network.NetworkIndicator;
 const BluetoothIndicator = Me.imports.indicators.bluetooth.BluetoothIndicator;
 const NightLightIndicator = Me.imports.indicators.nightlight.NightLightIndicator;
-const NotificationIndicator = Me.imports.indicators.notification.NotificationIndicator;
 const PowerIndicator = Me.imports.indicators.power.PowerIndicator;
 const UserIndicator = Me.imports.indicators.system.UserIndicator;
 const VolumeIndicator = Me.imports.indicators.volume.VolumeIndicator;

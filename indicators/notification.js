@@ -38,12 +38,12 @@ var NotificationIndicator = new Lang.Class({
 
         this._messageList = Main.panel.statusArea.dateMenu._messageList;
         try {
-            this._messageList._removeSection(this._messageList._eventsSection);
+            this._removeSection(this._messageList._eventsSection);
         } catch (e) {}
         
 
-        this._messageListParent = this._messageList.actor.get_parent();
-        this._messageListParent.remove_actor(this._messageList.actor);
+        this._messageListParent = this._messageList.get_parent();
+        this._messageListParent.remove_actor(this._messageList);
 
         this._indicator = new MessagesIndicator(Main.panel.statusArea.dateMenu._indicator._sources);
 
@@ -54,11 +54,11 @@ var NotificationIndicator = new Lang.Class({
             width: 400
         });
 
-        this._vbox.add(this._messageList.actor);
+        this._vbox.add(this._messageList);
         this.menu.box.add(this._vbox);
 
         try {
-            this._messageList._removeSection(this._messageList._mediaSection);
+            this._removeSection(this._messageList._mediaSection);
         } catch (e) {}
 
         this.menu.connect("open-state-changed", (menu, isOpen) => {
