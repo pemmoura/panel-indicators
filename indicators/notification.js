@@ -123,6 +123,7 @@ var MessagesIndicator = new Lang.Class({
         });
     },
     _onSourceAdded: function (tray, source) {
+        //IS THIS NEEDED?
         //source.connect('count-updated', () => this._updateCount());
         //this._sources.push(source);
         this._updateCount();
