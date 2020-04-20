@@ -120,7 +120,7 @@ var BluetoothIndicator = new Lang.Class({
 
         this.box.remove_child(this._bluetooth._indicator);
         this.menu.box.remove_actor(this._bluetooth.menu.actor);
-        this._bluetooth.indicators.add_actor(this._bluetooth._indicator);
+        this._bluetooth.add_actor(this._bluetooth._indicator);
         this._bluetooth._item.menu._setSettingsVisibility(true);
 
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._bluetooth.menu.actor);

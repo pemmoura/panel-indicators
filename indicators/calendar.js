@@ -81,8 +81,8 @@ var CalendarIndicator = new Lang.Class({
         this._messageList._clearButton.destroy();
         this._messageList.setEventSource(this._eventSource);
 
+        //Remove the notification part of the calendar
         this._messageList._sectionList.remove_actor(this._messageList._notificationSection);
-        this._messageList._sectionList.remove_actor(this._messageList._eventsSection);
         this._messageList._sectionList.remove_actor(this._messageList._eventsSection);
         this._messageList._sectionList.remove_actor(this._messageList._mediaSection);
         this._messageList._sync();
@@ -135,16 +135,17 @@ var CalendarIndicator = new Lang.Class({
         this.menu.connect("open-state-changed", (menu, isOpen) => {
             if (isOpen) {
                 let now = new Date();
+
                 this._date.setDate(now);
                 this._calendar.setDate(now);
-                this._messageList.setDate(now);
+                Main.panel.statusArea.dateMenu._messageList.setDate(now);
 
-                this.menu_size(hbox);  
+                this.menu_size(hbox);
             }
         });
 
         this._date_changed = this._calendar.connect("selected-date-changed", (calendar, date) => {
-            this._messageList.setDate(date);
+            // Main.panel.statusArea.dateMenu._messageList.setDate(now);
             this._messageList._placeholder._icon.gicon = this._otherIcon;
             this._messageList._placeholder._label.text = this._otherLabel;
         });

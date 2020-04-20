@@ -137,8 +137,8 @@ var NightLightIndicator = new Lang.Class({
     destroy: function () {
         this._nightLight._proxy.disconnect(this._properties_changed);
         this.box.remove_child(this._nightLight._indicator);
-        this._nightLight.indicators.hide();
-        this._nightLight.indicators.add_actor(this._nightLight._indicator);
+        this._nightLight.hide();
+        this._nightLight.add_actor(this._nightLight._indicator);
         this.parent();
     }
 });

@@ -126,7 +126,7 @@ var PowerIndicator = new Lang.Class({
         this.box.remove_child(this._power._indicator);
         this.menu.box.remove_actor(this._brightness.menu.actor);
         
-        this._power.indicators.add_actor(this._power._indicator);
+        this._power.add_actor(this._power._indicator);
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._brightness.menu.actor);
 
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._power.menu.actor);

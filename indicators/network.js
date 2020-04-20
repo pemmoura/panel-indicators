@@ -122,21 +122,21 @@ var NetworkIndicator = new Lang.Class({
         this.box.remove_child(this._location._indicator);
         this.menu.box.remove_actor(this._location.menu.actor);
 
-        this._location.indicators.add_actor(this._location._indicator);
+        this._location.add_actor(this._location._indicator);
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._location.menu.actor);
 
         this.box.remove_child(this._rfkill._indicator);
         this.menu.box.remove_actor(this._rfkill.menu.actor);
 
-        this._rfkill.indicators.add_actor(this._rfkill._indicator);
+        this._rfkill.add_actor(this._rfkill._indicator);
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._rfkill.menu.actor);
 
         this.box.remove_child(this._network._primaryIndicator);
         this.box.remove_child(this._network._vpnIndicator);
         this.menu.box.remove_actor(this._network.menu.actor);
 
-        this._network.indicators.add_actor(this._network._primaryIndicator);
-        this._network.indicators.add_actor(this._network._vpnIndicator);
+        this._network.add_actor(this._network._primaryIndicator);
+        this._network.add_actor(this._network._vpnIndicator);
         
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._network.menu.actor);
 
