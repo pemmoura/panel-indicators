@@ -41,7 +41,9 @@ var VolumeIndicator = new Lang.Class({
         this.menu.box.add_actor(this._volume.menu.actor);
 
         this._mediaSection = Main.panel.statusArea.dateMenu._messageList._mediaSection;
-        Main.panel.statusArea.dateMenu._messageList._sectionList.remove_actor(this._mediaSection);
+        if(this._mediaSection){
+            Main.panel.statusArea.dateMenu._messageList._sectionList.remove_actor(this._mediaSection);
+        }
 
         this._mediaSection.set_style('max-width:400px;padding-right:6px;padding-bottom:10px;');
 

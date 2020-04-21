@@ -43,15 +43,17 @@ var NetworkIndicator = new Lang.Class({
         }
 
         this._location = Main.panel.statusArea.aggregateMenu._location;
-        this._location.remove_actor(this._location._indicator);
-        this._location._indicator.hide();
+        if(this._location._indicator){
+            this._location.remove_actor(this._location._indicator);
+            this._location._indicator.hide();
+        }
 
         if (this._network) {
             this._network.remove_actor(this._network._primaryIndicator);
             this._network.remove_actor(this._network._vpnIndicator);
             this.box.add_child(this._network._primaryIndicator);
             this.box.add_child(this._network._vpnIndicator);
-            this._network._vpnIndicator.hide();            
+            this._network._vpnIndicator.hide();
         }
 
         this._rfkill.remove_actor(this._rfkill._indicator);
