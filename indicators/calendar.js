@@ -158,14 +158,14 @@ var CalendarIndicator = new Lang.Class({
  
         if (this._clocksSection._clocksApp != null) {
             clocksSectionHeight.length > 0 ? menuHeight += clocksSectionHeight : menuHeight += 120;
-            this._scrollView.actor.show();
-            this._clocksSection.actor.set_style('padding-left: 12px; padding-right: 20px;');
+            this._scrollView.show();
+            this._clocksSection.set_style('padding-left: 12px; padding-right: 20px;');
         } else {
             this._scrollView.hide();
         }
 
         if (this._weatherSection._weatherClient.available) {
-            menuHeight += this._weatherSection.actor.get_height();
+            menuHeight += this._weatherSection.get_height();
         }
 
         hbox.set_height(menuHeight);
@@ -206,15 +206,15 @@ var CalendarIndicator = new Lang.Class({
         
         this.box.remove_child(this._clockIndicator);
 
-        this._date.actor.get_parent().remove_child(this._date.actor);
-        this._calendar.actor.get_parent().remove_child(this._calendar.actor);
-        this._clocksSection.actor.get_parent().remove_child(this._clocksSection.actor);
-        this._weatherSection.actor.get_parent().remove_child(this._weatherSection.actor);
+        this._date.get_parent().remove_child(this._date);
+        this._calendar.get_parent().remove_child(this._calendar);
+        this._clocksSection.get_parent().remove_child(this._clocksSection);
+        this._weatherSection.get_parent().remove_child(this._weatherSection);
       
-        this._calendarParent.add_child(this._date.actor);
-        this._sectionParent.add_child(this._clocksSection.actor);
-        this._sectionParent.add_child(this._weatherSection.actor);
-        this._calendarParent.add_child(this._calendar.actor);
+        this._calendarParent.add_child(this._date);
+        this._sectionParent.add_child(this._clocksSection);
+        this._sectionParent.add_child(this._weatherSection);
+        this._calendarParent.add_child(this._calendar);
 
         this._indicatorParent.add_actor(this._clockIndicator);
 

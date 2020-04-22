@@ -63,12 +63,12 @@ var VolumeIndicator = new Lang.Class({
         this.menu.box.connect("scroll-event", (actor, event) => this._volume._onScrollEvent(actor, event));
     },
     destroy: function () {
-        this._mediaSection.actor.disconnect(this._mediaVisible);
+        this._mediaSection.disconnect(this._mediaVisible);
         this.box.remove_child(this._volume._primaryIndicator);
         this.menu.box.remove_actor(this._volume.menu.actor);
-        this.menu.box.remove_actor(this._mediaSection.actor);
+        this.menu.box.remove_actor(this._mediaSection);
         this._volume.add_actor(this._volume._primaryIndicator);
-        this._mediaSection.actor.remove_style_class_name("music-box");
+        this._mediaSection.remove_style_class_name("music-box");
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._volume.menu.actor);
         Main.panel.statusArea.dateMenu._messageList._addSection(this._mediaSection);
         this.parent();
