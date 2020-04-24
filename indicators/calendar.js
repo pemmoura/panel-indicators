@@ -73,7 +73,7 @@ var CalendarIndicator = new Lang.Class({
         hbox.add_actor(vbox);
 
         // MESSAGE
-        this._messageList = new imports.ui.calendar.CalendarMessageList();
+        this._messageList = Main.panel.statusArea.dateMenu._messageList;
         this._eventSource = new imports.ui.calendar.DBusEventSource();
 
         this._calendar.setEventSource(this._eventSource);

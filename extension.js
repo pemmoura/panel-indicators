@@ -25,8 +25,8 @@ const Convenience = Me.imports.convenience;
 
 const MenuItems = Me.imports.menuItems.MenuItems;
 const CustomButton = Me.imports.indicators.button.CustomButton;
-const NotificationIndicator = Me.imports.indicators.notification.NotificationIndicator;
-const CalendarIndicator = Me.imports.indicators.calendar.CalendarIndicator;
+// const NotificationIndicator = Me.imports.indicators.notification.NotificationIndicator;
+// const CalendarIndicator = Me.imports.indicators.calendar.CalendarIndicator;
 const NetworkIndicator = Me.imports.indicators.network.NetworkIndicator;
 const BluetoothIndicator = Me.imports.indicators.bluetooth.BluetoothIndicator;
 const NightLightIndicator = Me.imports.indicators.nightlight.NightLightIndicator;
@@ -48,30 +48,30 @@ let volume;
 let network;
 let bluetooth;
 let power;
-let calendar;
 let user;
-let notification;
+// let calendar;
+// let notification;
 
 const CENTER_BOX = Main.panel._centerBox;
 const RIGHT_BOX = Main.panel._rightBox;
 
 function enable() {
     Main.panel.statusArea.aggregateMenu.container.hide();
-    Main.panel.statusArea.dateMenu.container.hide();
-    Main.panel._centerBox.remove_child(Main.panel.statusArea.dateMenu.container);
+    // Main.panel.statusArea.dateMenu.container.hide();
+    // Main.panel._centerBox.remove_child(Main.panel.statusArea.dateMenu.container);
 
     network = new NetworkIndicator();
     bluetooth = new BluetoothIndicator();
     volume = new VolumeIndicator();
     power = new PowerIndicator();
-    notification = new NotificationIndicator();
-    calendar = new CalendarIndicator();
+    // notification = new NotificationIndicator();
+    // calendar = new CalendarIndicator();
     user = new UserIndicator();
     nightlight = new NightLightIndicator();
 
-    Main.panel.addToStatusArea(notification.name, notification, 0, "right");
     Main.panel.addToStatusArea(user.name, user, 0, "right");
-    Main.panel.addToStatusArea(calendar.name, calendar, 0, "right");
+    // Main.panel.addToStatusArea(calendar.name, calendar, 0, "right");
+    // Main.panel.addToStatusArea(notification.name, notification, 0, "right");
     Main.panel.addToStatusArea(power.name, power, 0, "right");
     Main.panel.addToStatusArea(network.name, network, 0, "right");
     Main.panel.addToStatusArea(bluetooth.name, bluetooth, 0, "right");
@@ -120,8 +120,8 @@ function applySettings() {
     setup(enabled, center, indicators, "volume", volume);
     setup(enabled, center, indicators, "network", network);
     setup(enabled, center, indicators, "bluetooth", bluetooth);
-    setup(enabled, center, indicators, "notification", notification);
-    setup(enabled, center, indicators, "calendar", calendar);
+    // setup(enabled, center, indicators, "notification", notification);
+    // setup(enabled, center, indicators, "calendar", calendar);
     setup(enabled, center, indicators, "nightlight", nightlight);
 
     let rightchildren = RIGHT_BOX.get_children().length;
@@ -155,9 +155,9 @@ function removeAll() {
     removeContainer(network);
     removeContainer(bluetooth);
     removeContainer(power);
-    removeContainer(calendar);
     removeContainer(user);
-    removeContainer(notification);
+    // removeContainer(calendar);
+    // removeContainer(notification);
 }
 
 function removeContainer(item) {
@@ -182,8 +182,8 @@ function disable() {
     network.destroy();
     bluetooth.destroy();
     user.destroy();
-    notification.destroy();
-    calendar.destroy();
+    // notification.destroy();
+    // calendar.destroy();
 
     Main.panel.statusArea.aggregateMenu.container.show();
     Main.panel.statusArea.dateMenu.container.show();
