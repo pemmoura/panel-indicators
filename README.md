@@ -26,7 +26,7 @@ For a regular use and local development these are the steps to build the
 project and install it:
 
 ```bash
-meson --prefix=$HOME/.local/ --localedir=share/gnome-shell/extensions/panel-indicators@leavitals/locale .build
+meson --prefix=$HOME/.local/ --localedir=share/gnome-shell/extensions/panel-indicators@pemmoura/locale .build
 ninja -C .build install
 ```
 
@@ -42,5 +42,5 @@ To create a ZIP file with the extension, just run:
 ./export-zip.sh
 ```
 
-This will create the file `panel-indicators@leavitals.zip` with the extension, following the rules for publishing
+This will create the file `panel-indicators@pemmoura.zip` with the extension, following the rules for publishing
 at extensions.gnome.org.

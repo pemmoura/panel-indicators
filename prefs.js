@@ -229,7 +229,6 @@ var SettingsPage = new Lang.Class({
 
         // add the frames
         this.add(userFrame);
-        this.add(calendarFrame);
         this.add(powerFrame);
     }
 });

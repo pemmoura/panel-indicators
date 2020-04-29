@@ -10,7 +10,7 @@ prefix = get_option('prefix')
 datadir = join_paths (prefix, get_option('datadir'))
 schema_dir = join_paths(datadir, 'glib-2.0', 'schemas')
 
-extensions_dir = join_paths(prefix, 'share', 'gnome-shell', 'extensions', 'panel-indicators@leavitals')
+extensions_dir = join_paths(prefix, 'share', 'gnome-shell', 'extensions', 'panel-indicators@pemmoura')
 
 icons_dir = join_paths(extensions_dir, 'icons')
 indicators_dir = join_paths(extensions_dir, 'indicators')

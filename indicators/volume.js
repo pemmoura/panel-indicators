@@ -39,22 +39,6 @@ var VolumeIndicator = new Lang.Class({
         this.box.add_child(this._volume._primaryIndicator);
         Main.panel.statusArea.aggregateMenu.menu.box.remove_actor(this._volume.menu.actor);
         this.menu.box.add_actor(this._volume.menu.actor);
-
-        this._mediaSection = Main.panel.statusArea.dateMenu._messageList._mediaSection;
-        if(this._mediaSection){
-            Main.panel.statusArea.dateMenu._messageList._sectionList.remove_actor(this._mediaSection);
-        }
-
-        this._mediaSection.set_style('max-width:400px;padding-right:6px;padding-bottom:10px;');
-
-        this.menu.box.add_actor(this._mediaSection);
-
-        this.menu.connect("open-state-changed", (menu, isOpen) => {
-            if (isOpen) {
-                this._mediaSection.show();
-            }
-        });
-
         this.connect("scroll-event", (actor, event) => this._volume._onScrollEvent(actor, event));
 
         let settings = new PopupMenu.PopupMenuItem(_("Volume Settings"));
@@ -63,14 +47,14 @@ var VolumeIndicator = new Lang.Class({
         this.menu.box.connect("scroll-event", (actor, event) => this._volume._onScrollEvent(actor, event));
     },
     destroy: function () {
-        this._mediaSection.disconnect(this._mediaVisible);
+        //this._mediaSection.disconnect(this._mediaVisible);
         this.box.remove_child(this._volume._primaryIndicator);
         this.menu.box.remove_actor(this._volume.menu.actor);
         this.menu.box.remove_actor(this._mediaSection);
         this._volume.add_actor(this._volume._primaryIndicator);
         this._mediaSection.remove_style_class_name("music-box");
         Main.panel.statusArea.aggregateMenu.menu.box.add_actor(this._volume.menu.actor);
-        Main.panel.statusArea.dateMenu._messageList._addSection(this._mediaSection);
+        //Main.panel.statusArea.dateMenu._messageList._addSection(this._mediaSection);
         this.parent();
     }
 });

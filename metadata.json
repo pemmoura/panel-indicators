@@ -1,10 +1,10 @@
 {
   "name": "Panel Indicators",
-  "description": "Move the Power/Network/Volume/User/Date/Notifications menus to the status area.",
-  "uuid": "panel-indicators@leavitals",
+  "description": "Move the Power/Network/Volume/User/Notifications menus to the status area.",
+  "uuid": "panel-indicators@pemmoura",
   "version": 1,
   "shell-version": [
-    "3.34"
+    "3.36"
   ],
-  "url": "https://github.com/lvitals/panel-indicators"
+  "url": "https://github.com/pemmoura/panel-indicators"
 }
