@@ -35,12 +35,6 @@
     icon-size: 16px;
 }
 
-/* Message list */
-.message-list {
-    width: 22.5em;
-    max-height: 350px;
-}
-
 .panel-status-menu-box>StIcon { 
     icons-size: 16px; padding: 4px;
 }

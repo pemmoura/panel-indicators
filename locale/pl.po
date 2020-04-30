@@ -30,14 +30,6 @@ msgstr "Wskaźnik systemu/użytkownika"
 msgid "Show an icon instead of name"
 msgstr "Pokaż ikonę zamiast nazwy"
 
-#: ../prefs.js:214
-msgid "Calendar Indicator"
-msgstr "Wskaźnik kalendarza"
-
-#: ../prefs.js:218
-msgid "Change date format"
-msgstr "Zmień format daty"
-
 #: ../prefs.js:251
 msgid "Power Indicator"
 msgstr "Wskaźnik zasilania"
@@ -99,14 +91,6 @@ msgid "This extension is a fork of Extend Panel Menu, thanks to julio641742"
 msgstr ""
 "To rozszerzenie powstało na podstawie 'Extend Panel Menu'.\n"
 "Podziękowania dla julio641742."
-
-#: ../indicators/calendar.js:100
-msgid "No Events"
-msgstr "Brak zdarzeń"
-
-#: ../indicators/calendar.js:128
-msgid "Date Time Settings"
-msgstr "Ustawienia daty i czasu"
 
 #: ../indicators/network.js:95
 msgid "Network Settings"

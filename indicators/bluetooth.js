@@ -35,7 +35,7 @@ var BluetoothIndicator = new Lang.Class({
 
     _init: function () {
         this.parent("BluetoothIndicator");
-        this.menu.box.set_width(270);
+        //this.menu.box.set_width(270);
         this.menu.actor.add_style_class_name("aggregate-menu");
 
         this._bluetooth = null;

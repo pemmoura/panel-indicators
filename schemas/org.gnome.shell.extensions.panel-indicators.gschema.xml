@@ -4,18 +4,10 @@
             <default>true</default>
             <summary>Show an icon instead of name</summary>
         </key>
-        <key name="date-format" type="s">
-            <default>""</default>
-            <summary>Date format</summary>
-        </key>
         <key name="spacing" type="i">
             <default>9</default>
             <summary>Horizontal Spacing</summary>
             <range min="0" max="15"/>
-        </key>
-        <key name="players" type="s">
-            <default>""</default>
-            <summary>MPRIS2 Capable Media Players</summary>
         </key>
         <key name="items" type="s">
             <default>"Night Light;1;0;nightlight|Volume;1;0;volume|Network;1;0;network|Bluetooth;1;0;bluetooth|Power (Brightness);1;0;power|User;1;0;user"</default>

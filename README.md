@@ -2,7 +2,7 @@
 
 ## What  is it
 
-A GNOME Shell extension for move the Power/Network/Volume/User/Date/Notifications menus to the status area.
+A GNOME Shell extension for move the Power/Network/Volume/User/Notifications menus to the status area.
 
 ## Requirements
 

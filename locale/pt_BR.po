@@ -30,14 +30,6 @@ msgstr "Indicador de Usuário"
 msgid "Show an icon instead of name"
 msgstr "Mostre um ícone em vez do nome"
 
-#: ../prefs.js:214
-msgid "Calendar Indicator"
-msgstr "Indicador de calendário"
-
-#: ../prefs.js:218
-msgid "Change date format"
-msgstr "Alterar formato da data"
-
 #: ../prefs.js:251
 msgid "Power Indicator"
 msgstr "Indicador de energia"
@@ -101,14 +93,6 @@ msgstr "Esta extensão é um fork do Extend Panel Menu, obrigado julio641742"
 #: ../indicators/bluetooth.js:70
 msgid "Bluetooth Settings"
 msgstr "Configurações de Bluetooth"
-
-#: ../indicators/calendar.js:101
-msgid "No Events"
-msgstr "Nenhum evento"
-
-#: ../indicators/calendar.js:129
-msgid "Date Time Settings"
-msgstr "Configurações de Data e Hora"
 
 #: ../indicators/network.js:79
 msgid "Network Settings"
@@ -185,10 +169,6 @@ msgstr "Desligar"
 #: ../indicators/volume.js:66
 msgid "Volume Settings"
 msgstr "Configurações de Volume"
-
-#: schemas.xml
-msgid "Calendar"
-msgstr "Calendário"
 
 msgid "Night Light"
 msgstr "Luz noturna"

@@ -28,14 +28,6 @@ msgstr ""
 msgid "Show an icon instead of name"
 msgstr ""
 
-#: ../prefs.js:214
-msgid "Calendar Indicator"
-msgstr ""
-
-#: ../prefs.js:218
-msgid "Change date format"
-msgstr ""
-
 #: ../prefs.js:251
 msgid "Power Indicator"
 msgstr ""
@@ -98,14 +90,6 @@ msgstr ""
 
 #: ../indicators/bluetooth.js:70
 msgid "Bluetooth Settings"
-msgstr ""
-
-#: ../indicators/calendar.js:101
-msgid "No Events"
-msgstr ""
-
-#: ../indicators/calendar.js:129
-msgid "Date Time Settings"
 msgstr ""
 
 #: ../indicators/network.js:79
@@ -184,11 +168,7 @@ msgstr ""
 msgid "Volume Settings"
 msgstr ""
 
-
 #: schemas.xml
-msgid "Calendar"
-msgstr ""
-
 msgid "Night Light"
 msgstr ""
 

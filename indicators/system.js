@@ -34,7 +34,7 @@ var UserIndicator = new Lang.Class({
 
     _init: function () {
         this.parent("UserIndicator");
-        this.menu.box.set_width(270);
+        //this.menu.box.set_width(270);
         this.menu.actor.add_style_class_name("aggregate-menu");
         this._system = Main.panel.statusArea.aggregateMenu._system;
         this._screencast = Main.panel.statusArea.aggregateMenu._screencast;

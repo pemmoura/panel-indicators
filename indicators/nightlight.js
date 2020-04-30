@@ -36,7 +36,7 @@ var NightLightIndicator = new Lang.Class({
         this._max = 1700;
 
         this.parent("NightLightIndicator");
-        this.menu.box.set_width(250);
+        //this.menu.box.set_width(250);
         this.menu.actor.add_style_class_name("aggregate-menu");
 
         this._nightLight = Main.panel.statusArea.aggregateMenu._nightLight;

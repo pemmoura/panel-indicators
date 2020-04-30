@@ -44,7 +44,7 @@ echo "# Create extension ZIP file"
 echo "# --------------------------"
 rm -rf "${REPO_DIR}/${UUID}.zip" "${LOCAL_PREFIX}/${UUID}.zip"
 cd "${LOCAL_PREFIX}" || exit
-mkdir schemas
+mkdir -p schemas
 cp "${SCHEMADIR}"/*.xml schemas/
 glib-compile-schemas schemas/
 cp -r "${EXTENSIONS_DIR}"/* .
