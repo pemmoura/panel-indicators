@@ -1,1 +1,186 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Panel indicator\n"
+"Language: it\n"
+
+#: ../prefs.js:184
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../prefs.js:193
+msgid "User/System Indicator"
+msgstr "Utente/Indicatore di sistema"
+
+#: ../prefs.js:197
+msgid "Show an icon instead of name"
+msgstr "Mostra un'icona invece del nome"
+
+#: ../prefs.js:251
+msgid "Power Indicator"
+msgstr "Indicatore di energia"
+
+#: ../prefs.js:255
+msgid "Show battery percentage"
+msgstr "Mostra la percentuale della batteria"
+
+#: ../prefs.js:279
+msgid "Position and size"
+msgstr "Posizione e dimensioni"
+
+#: ../prefs.js:283
+msgid "Indicators spacing"
+msgstr "Distanza degli indicatori"
+
+#: ../prefs.js:330
+msgid "Indicators Order"
+msgstr "Ordine degli indicatori"
+
+#: ../prefs.js:350
+msgid "Left"
+msgstr "Sinistra"
+
+#: ../prefs.js:351
+msgid "Center"
+msgstr "Centro"
+
+#: ../prefs.js:404
+msgid "Top to bottom -> Left to right"
+msgstr "Dall'alto in basso -> Da sinistra a destra"
+
+#: ../prefs.js:409
+msgid "Reset Indicators"
+msgstr "Indicatori di ripristino"
+
+#: ../prefs.js:415
+msgid "Reset"
+msgstr "Ripristina"
+
+#: ../prefs.js:452
+msgid "About"
+msgstr "Circa"
+
+#: ../prefs.js:484
+msgid "Version: "
+msgstr "Versione:"
+
+#: ../prefs.js:493
+msgid "If something breaks, don't hesitate to leave a comment at "
+msgstr "Se qualcosa non funzionasse, non esitate a lasciare un commento a"
+
+#: ../prefs.js:497
+msgid "Webpage/Github"
+msgstr " Pagina web/Github\n"
+""
+
+#: ../prefs.js:508
+msgid "This extension is a fork of Extend Panel Menu, thanks to julio641742"
+msgstr "Questa estensione è un fork di Extend Panel Menu, grazie a julio641742"
+
+#: ../indicators/bluetooth.js:70
+msgid "Bluetooth Settings"
+msgstr "Impostazioni Bluetooth"
+
+#: ../indicators/network.js:79
+msgid "Network Settings"
+msgstr "Impostazioni di rete"
+
+#: ../indicators/nightlight.js:70
+msgid "Temperature"
+msgstr "Temperatura"
+
+#: ../indicators/nightlight.js:88 ../indicators/nightlight.js:132
+msgid "Resume"
+msgstr "Riprendere"
+
+#: ../indicators/nightlight.js:92 ../indicators/nightlight.js:128
+msgid "Turn Off"
+msgstr "Spegni"
+
+#: ../indicators/nightlight.js:96
+msgid "Display Settings"
+msgstr "Impostazioni di visualizzazione"
+
+#: ../indicators/nightlight.js:128
+msgid "Turn On"
+msgstr "Accendi"
+
+#: ../indicators/nightlight.js:131
+msgid "Night Light Disabled"
+msgstr "Luce Notturna disabilitata"
+
+#: ../indicators/nightlight.js:131
+msgid "Night Light On"
+msgstr "Luce Notturna abilitata"
+
+#: ../indicators/nightlight.js:132
+msgid "Disable Until Tomorrow"
+msgstr "Disabilita fino a domani"
+
+#: ../indicators/power.js:64
+msgid "Power Settings"
+msgstr "Impostazioni di alimentazione"
+
+#: ../indicators/system.js:76
+msgid "Log Out"
+msgstr "Disconnetti"
+
+#: ../indicators/system.js:83
+msgid "Account Settings"
+msgstr "Impostazioni dell'account"
+
+#: ../indicators/system.js:94
+msgid "System Settings"
+msgstr "Impostazioni di sistema"
+
+#: ../indicators/system.js:114
+msgid "Lock"
+msgstr "Blocca"
+
+#: ../indicators/system.js:136
+msgid "Switch User"
+msgstr "Cambia utente"
+
+#: ../indicators/system.js:159
+msgid "Orientation Lock"
+msgstr "Blocca l'orientamento"
+
+#: ../indicators/system.js:180
+msgid "Suspend"
+msgstr "Sospendi"
+
+#: ../indicators/system.js:201
+msgid "Power Off"
+msgstr "Spegni"
+
+#: ../indicators/volume.js:66
+msgid "Volume Settings"
+msgstr "Impostazioni del Volume"
+
+#: schemas.xml
+msgid "Night Light"
+msgstr "Luce Notturna"
+
+#: 
+msgid "Volume"
+msgstr "Volume"
+
+#: 
+msgid "Network"
+msgstr "Rete"
+
+#: 
+msgid "Power (Brightness)"
+msgstr "Potenza Luminosità)"
+
+#: 
+msgid "Notification"
+msgstr "Notifica"
+
+#: 
+msgid "User"
+msgstr "Utente"
 
