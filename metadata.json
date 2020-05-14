@@ -2,7 +2,7 @@
   "name": "Panel Indicators",
   "description": "Move the Power/Network/Volume/User/Notifications menus to the status area.",
   "uuid": "panel-indicators@pemmoura",
-  "version": 1,
+  "version": 2,
   "shell-version": [
     "3.36"
   ],
