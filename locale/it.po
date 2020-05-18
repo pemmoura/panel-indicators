@@ -73,8 +73,7 @@ msgstr "Se qualcosa non funzionasse, non esitate a lasciare un commento a"
 
 #: ../prefs.js:497
 msgid "Webpage/Github"
-msgstr " Pagina web/Github\n"
-""
+msgstr " Pagina web/Github"
 
 #: ../prefs.js:508
 msgid "This extension is a fork of Extend Panel Menu, thanks to julio641742"
