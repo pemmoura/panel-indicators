@@ -95,7 +95,11 @@ var BluetoothIndicator = new Lang.Class({
         let sensitive = !Main.sessionMode.isLocked && !Main.sessionMode.isGreeter;
         this.menu.setSensitive(sensitive);
 
-        let [nDevices, nConnectedDevices] = this._bluetooth._getNDevices();
+        let adapter = this._bluetooth._getDefaultAdapter();
+	let devices = this._bluetooth._getDeviceInfos(adapter);
+        let connectedDevices = devices.filter(dev => dev.connected);
+        let nConnectedDevices = connectedDevices.length;
+        let nDevices = devices.length;
 
         if (nConnectedDevices > 0) {
             // Paired
